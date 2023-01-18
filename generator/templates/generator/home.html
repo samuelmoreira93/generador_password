@@ -1,0 +1,50 @@
+{% extends 'generator/layout.html' %}
+
+{% block content %}
+
+<div class="col-md-4 offset-md-4">
+
+    <form action="password" class="card card-body p-5"
+    style="background-color:#121212">
+
+        <h1 class="h4">Password Generator</h1>
+        
+        <label form="length">Select the length of your password:</label>
+        <select name="length" id="length" class="form-control">  
+    
+            <option value="6">6 Characters</option>
+            <option value="7">7 characters</option>
+            <option value="8">8 characters</option>
+            <option value="9">9 characters</option>
+            <option value="10">10 characters</option>
+            <option value="11">11 characters</option>
+            <option value="12">12 characters</option>
+            <option value="13">13 characters</option>
+            <option value="14">14 characters</option>
+    
+        </select>
+
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="uppercase" name="uppercase">
+            <label class="custom-control-label" for="uppercase">Uppercase</label>
+          </div>
+
+          <div class="custom-control custom-switch">
+            <input type="checkbox" name="special" id="special" class="custom-control-input">
+            <label for="special" class="custom-control-label">Special Characters</label>
+            
+        </div>
+    
+        <div class="custom-control custom-switch">
+            <input type="checkbox" name="numbers" id="numbers" class="custom-control-input">
+            <label for="numbers" class="custom-control-label">Numbers</label>
+            
+        </div>
+    
+        <button class="btn btn-primary">Generate Password</button>
+    
+    </form>
+
+</div>
+
+{% endblock %}
